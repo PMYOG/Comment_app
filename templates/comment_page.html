@@ -1,0 +1,62 @@
+<!DOCTYPE html>    
+<html>    
+<head>    
+    <title>Login Form</title>    
+</head>    
+<style>
+    body  
+{  
+    margin: 0;  
+    padding: 0;  
+    background-color:#6abadeba;  
+    font-family: 'Arial';  
+}  
+.login{  
+        width: 382px;  
+        overflow: hidden;  
+        margin: auto;  
+        margin: 20 0 0 450px;  
+        padding: 80px;  
+        background: #23463f;  
+        border-radius: 15px ;  
+          
+}  
+h2{  
+    text-align: center;  
+    color: #277582;  
+    padding: 20px;  
+}  
+label{  
+    color: #08ffd1;  
+    font-size: 17px;  
+}  
+
+ 
+a{  
+    float: right;  
+    background-color: grey;  
+}  
+</style>
+<body>    
+    <h2>Comments</h2><br>    
+    <div class="login">    
+        
+        <label>What would you like to share <br>
+        </label>    
+        <form method="post" action="/comment_page">
+        <textarea name="data" id="data" style="font-size: 15pt; width: 350px; height: 100px;" placeholder="...."></textarea>    
+        <br><br>
+        <button name="Submit" value="Submit"  >Submit</button><br><br>
+        </form>
+        <form method="get" action="/comment_page_user">
+            <button name="Filter" value="Filter"  >Filter</button><br><br>
+        </form>
+        {% for item in d %}<tr>
+            <label>{{ item['comment'] }}</label><br>
+            <label style="text-align: right;">{{ item['email'] }}</label><br><br>
+        {% endfor %}
+        <a href="{{url_for('logout')}}" >LOGOUT</a></center>
+  
+</div>    
+</body>    
+</html> 

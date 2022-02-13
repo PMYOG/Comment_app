@@ -1,0 +1,63 @@
+<!DOCTYPE html>    
+<html>    
+<head>    
+    <title>Login Form</title>    
+</head>    
+<style>
+    body  
+{  
+    margin: 0;  
+    padding: 0;  
+    background-color:#6abadeba;  
+    font-family: 'Arial';  
+}  
+.login{  
+        width: 382px;  
+        overflow: hidden;  
+        margin: auto;  
+        margin: 20 0 0 450px;  
+        padding: 80px;  
+        background: #23463f;  
+        border-radius: 15px ;  
+          
+}  
+h2{  
+    text-align: center;  
+    color: #277582;  
+    padding: 20px;  
+}  
+label{  
+    color: #08ffd1;  
+    font-size: 17px;  
+}   
+a{  
+    float: right;  
+    background-color: grey;  
+}  
+</style>
+<body>    
+    <h2>Login Page</h2><br>    
+    <div class="login">    
+        <form method="post" action="/login">
+        <label>Don't have an account? <a href="{{url_for('register')}}">Sign up</a>
+            <br><br><br>
+        </label> 
+        <label><b>Email Id     
+        </b>    <br>
+        </label>    
+        <input type="text" name="mail" id="mail" placeholder="123@gmail.com">    
+        <br><br>    
+        <label>
+            <b>Password</b>    <br>
+        </label>    
+            <input type="Password" name="pwd" id="pwd" placeholder="Password">    
+        <br><br><br>    
+        
+            <button name="signin" value="signin"  >Sign in</button><br><br>
+            
+        <a href="{{url_for('forget_password')}}">Forgot Password</a>    
+            <label>{{message}}</label>
+    </form>     
+</div>    
+</body>    
+</html> 
