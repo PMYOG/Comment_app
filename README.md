@@ -1,12 +1,12 @@
 # Comment_app
 
-Line Installing required frameworks:
+> Installing required frameworks:
 
 
-Line python get-pip.py
-Line python -m pip install --upgrade pip
-Line pip install -r requirements.txt
+> python get-pip.py
+> python -m pip install --upgrade pip
+> pip install -r requirements.txt
 
 
-Line Running flask server:
-Line python app.py
+> Running flask server:
+> python app.py
