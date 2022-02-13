@@ -11,19 +11,33 @@ py -m pip install --user virtualenv
  python get-pip.py
 
  python -m pip install --upgrade pip
+ 
+* Navigate to `Comment_app` project and setup a virtual environment in Python
+```
+cd Comment_app
+python -m venv env
+```
 
-* Activate the virtual environment (Windows)
+* Activate the virtual environment on linux
 ```
 source env/Scripts/activate
+```
+*on windows
+```
+env/Scripts/activate
 ```
 
 * Navigate to src folder and install all project and developer dependencies
 ```
+mkdir src
 cd src
-pip install -r requirements.txt
+pip install -r ../requirements.txt
+cd ..
 ```
 
 
 > Running flask server:
 
+```
  python app.py
+```
